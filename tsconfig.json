@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["ES2024"],
+    "module": "Node16",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "listEmittedFiles": true,
+    "skipLibCheck": false,
+    "typeRoots": ["./types"]
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules"]
+}
