@@ -1,0 +1,50 @@
+{
+  "name": "lorikeet-collective-backend",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Lorikeet Collective",
+  "license": "MIT",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lorikeet-Collective/BaseSite-Backend.git"
+  },
+  "scripts": {
+    "dev": "env NODE_ENV=development nodemon server.ts",
+    "start": "env NODE_ENV=production pm2 start --update-env ./dist/server.js",
+    "build": "tsc -b",
+    "restart": "env NODE_ENV=production pm2 restart --update-env ./dist/server.js",
+    "stop": "pm2 stop ./dist/server.js",
+    "kill": "pm2 kill",
+    "update-pm2": "pm2 update",
+    "status": "pm2 status",
+    "logs": "pm2 logs",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.2",
+    "pm2": "^6.0.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.14.0",
+    "eslint": "^9.24.0",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "npm-check-updates": "^17.1.16",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.0"
+  }
+}
