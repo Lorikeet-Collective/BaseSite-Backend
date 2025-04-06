@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser";
 import routes from "./routes/base.routes";
 
 const app: Express = express();
-const port: number = Number(process.env.PORT) ?? 8000;
+const port: number = Number(process.env.PORT) || 8000;
 
 app.use(
   cors({
