@@ -1,7 +1,7 @@
-import type { Express, Request, Response } from "express";
+import type { Express, Response } from "express";
 
 const routes = (app: Express): void => {
-  app.get("/", async (req: Request, res: Response): Promise<void> => {
+  app.get("/", async (_, res: Response): Promise<void> => {
     res.json({ message: "Hello World!" });
   });
 };

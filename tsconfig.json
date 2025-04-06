@@ -1,15 +1,29 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "lib": ["ES2024"],
-    "module": "Node18",
+    /* Compiler */
+    "target": "ES2024",
+    "module": "NodeNext",
+
+    /* General */
     "outDir": "./dist",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "typeRoots": ["./types"],
+    "skipLibCheck": true,
     "listEmittedFiles": true,
-    "skipLibCheck": false,
-    "typeRoots": ["./types"]
+
+    /* Bundler mode */
+    "esModuleInterop": true,
+    "moduleResolution": "nodenext",
+    "isolatedModules": true,
+    "moduleDetection": "auto",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["./**/*.ts"],
   "exclude": ["node_modules"]
