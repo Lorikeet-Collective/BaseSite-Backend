@@ -1,0 +1,19 @@
+{
+  "name": "lorikeet-collective-backend",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Lorikeet Collective",
+  "license": "MIT",
+  "main": "server.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lorikeet-Collective/BaseSite-Backend.git"
+  },
+  "scripts": {
+    "dev": "nodemon server.ts",
+    "build": "tsc -b",
+    "lint": "eslint .",
+    "start": "node ./dist/server.js"
+  }
+}
