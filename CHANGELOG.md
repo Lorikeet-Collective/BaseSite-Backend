@@ -1,4 +1,4 @@
-# Current Version: [v0.0.1](#v001)
+# Current Version: [v0.0.2](#v002)
 
 > [!IMPORTANT]
 >
@@ -17,11 +17,26 @@
 <details>
     <summary>Table-of-Contents</summary>
 
+- [v0.0.2](#v002)
 - [v0.0.1](#v001)
 
 </details>
 
 ## Previous Versions
+
+### v0.0.2
+
+<details>
+    <summary>Changes</summary>
+
+- New Features
+  - Added mongodb connection file
+  - Added connection for both production and development environments
+  - Server will log database destination on start
+- Fixes
+  - Updated eslint config for easier use with typescript type system
+
+</details>
 
 ### v0.0.1
 
