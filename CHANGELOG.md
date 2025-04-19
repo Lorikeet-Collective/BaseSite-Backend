@@ -32,6 +32,8 @@
 
 - New Features
   - Added Account Schema layout for account creation
+- Changes
+  - Changed routing system to use express.Router()
 
 </details>
 
