@@ -10,8 +10,13 @@ router.use("/admin", [
     res.json({ message: "Hello Admins!" });
   }),
   router.get("/list", async (_, res: Response): Promise<void> => {
-    const allAdmins = await Account.find();
-    res.status(200).json(allAdmins);
+    await Account.find()
+      .then((accounts) => {
+        res.status(200).json(accounts);
+      })
+      .catch((err) => {
+        res.status(500).json(err);
+      });
   }),
 ]);
 
