@@ -6,19 +6,15 @@ enum Clearance {
   admin = 2,
 }
 
-declare global {
-  namespace Schemas {
-    interface Account {
-      username: string;
-      password: string;
-      clearance: Clearance;
-      createdAt: number;
-      updatedAt: number;
-    }
-  }
-  namespace Models {
-    interface Account extends Model<Account> {}
+export namespace Schemas {
+  interface Account {
+    username: string;
+    password: string;
+    clearance: Clearance;
+    createdAt: number;
+    updatedAt: number;
   }
 }
-
-export {};
+export namespace Models {
+  interface Account extends Model<Account> {}
+}

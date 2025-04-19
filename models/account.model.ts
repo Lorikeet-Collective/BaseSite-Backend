@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import type { Schemas, Models } from "../types";
 
 const AccountSchema = new Schema<Schemas.Account, Models.Account>(
   {
