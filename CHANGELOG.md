@@ -1,4 +1,4 @@
-# Current Version: [v0.0.2](#v002)
+# Current Version: [v0.0.3](#v003)
 
 > [!IMPORTANT]
 >
@@ -17,12 +17,23 @@
 <details>
     <summary>Table-of-Contents</summary>
 
+- [v0.0.3](#v003)
 - [v0.0.2](#v002)
 - [v0.0.1](#v001)
 
 </details>
 
 ## Previous Versions
+
+### v0.0.3
+
+<details>
+    <summary>Changes</summary>
+
+- New Features
+  - Added Account Schema layout for account creation
+
+</details>
 
 ### v0.0.2
 
