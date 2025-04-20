@@ -24,8 +24,7 @@ app.use(
   express.urlencoded({ extended: true })
 );
 
-// Route imports
-// All routes are prefixed with /api
+// Route imports, All routes are prefixed with /api
 app.use("/api", routes, adminRoutes);
 
 // Server startup

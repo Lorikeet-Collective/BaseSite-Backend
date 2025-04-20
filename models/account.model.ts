@@ -29,4 +29,5 @@ const AccountSchema = new Schema<Schemas.Account, Models.Account>(
   }
 );
 
-export const Account = model<Schemas.Account>("Account", AccountSchema);
+const Account = model<Schemas.Account>("Account", AccountSchema);
+export default Account;
