@@ -1,4 +1,3 @@
-import type { Response } from "express";
 import { Router } from "express";
 import accountController from "../controllers/account.controller";
 
