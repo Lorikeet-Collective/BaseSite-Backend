@@ -31,7 +31,8 @@
     <summary>Changes</summary>
 
 - New Features
-  - Added Account Schema layout for account creation
+  - Added Account schema layout for account creation
+  - Added Account controller for route logic
 - Changes
   - Changed routing system to use express.Router()
 
