@@ -15,28 +15,29 @@ const accountController = {
   login: async (req: LoginReq, res: Response): Promise<void> => {
     await Account.findOne({
       username: req.body.username,
-    }).then(async (account) => {
-      await bcrypt
-        .compare(req.body.password, account!.password)
-        .then(async (result) => {
-          if (result) {
-            const token = Jwt.sign(
-              JSON.stringify(account),
-              process.env.SECRET_KEY,
-              { expiresIn: "1hr" }
-            );
-            res
-              .status(200)
-              .cookie("adminToken", token, {
-                httpOnly: true,
-                secure: true,
-                signed: true,
-                sameSite: "none",
-              })
-              .json({ clearanceLevel: account!.clearance });
-          }
-        });
-    });
+    })
+      .then(async (account) => {
+        if (account) {
+          await bcrypt
+            .compare(req.body.password, account.password)
+            .then((result) => {
+              if (result) {
+                const token = Jwt.sign(
+                  { userId: account._id, clearance: account.clearance },
+                  process.env.SECRET_KEY,
+                  { expiresIn: 1000 * 60 * 60 }
+                );
+                res
+                  .set("Authorization", `Bearer ${token}`)
+                  .status(200)
+                  .json({ msg: "Logging In..." });
+              } else res.status(400).json({ msg: "Incorrect Password." });
+            });
+        } else res.status(400).json({ msg: "Username not found." });
+      })
+      .catch((err) =>
+        res.status(500).json({ msg: "Something went wrong.", err: err })
+      );
   },
 };
 
