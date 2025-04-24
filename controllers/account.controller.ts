@@ -31,13 +31,35 @@ const accountController = {
                   .set("Authorization", `Bearer ${token}`)
                   .status(200)
                   .json({ msg: "Logging In..." });
-              } else res.status(400).json({ msg: "Incorrect Password." });
+              } else {
+                res
+                  .status(400)
+                  .json(
+                    new Account().invalidate(
+                      "password",
+                      "Incorrect password.",
+                      req.body.password,
+                      "Validation"
+                    )
+                  );
+              }
             });
-        } else res.status(400).json({ msg: "Username not found." });
+        } else {
+          res
+            .status(400)
+            .json(
+              new Account().invalidate(
+                "username",
+                "Username not found.",
+                req.body.username,
+                "Validation"
+              )
+            );
+        }
       })
-      .catch((err) =>
-        res.status(500).json({ msg: "Something went wrong.", err: err })
-      );
+      .catch((err) => {
+        res.status(500).json({ msg: "Something went wrong.", err: err });
+      });
   },
 };
 
