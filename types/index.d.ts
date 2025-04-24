@@ -1,4 +1,5 @@
 import type { Model } from "mongoose";
+import type { Request } from "express";
 
 enum Clearance {
   readOnly = 0,
@@ -17,4 +18,13 @@ export namespace Schemas {
 }
 export namespace Models {
   interface Account extends Model<Account> {}
+}
+
+export namespace Requests {
+  interface Login extends Request {
+    body: {
+      username: string;
+      password: string;
+    };
+  }
 }

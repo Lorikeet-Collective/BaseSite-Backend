@@ -6,6 +6,7 @@ const router: Router = Router();
 // All admin routes are prefixed with /admin
 router.use("/admin", [
   router.get("/list", accountController.listAll),
+  router.post("/login", accountController.login),
 ]);
 
 export default router;

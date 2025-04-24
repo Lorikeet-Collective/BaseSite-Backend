@@ -20,7 +20,7 @@ app.use(
     credentials: true,
   }),
   express.json(),
-  cookieParser(),
+  cookieParser(process.env.SECRET_KEY),
   express.urlencoded({ extended: true })
 );
 
