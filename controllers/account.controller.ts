@@ -1,4 +1,4 @@
-import type { Response } from "express";
+import type { Request, Response } from "express";
 import type { Requests } from "../types";
 import Account from "../models/account.model";
 import Jwt from "jsonwebtoken";
@@ -69,10 +69,12 @@ const accountController = {
         res.status(500).json({ msg: "Something went wrong.", err: err });
       });
   },
-  logout: (_: unknown, res: Response): void => {
+  logout: (req: Request, res: Response): void => {
     // Bearer token must exist and be removed
-    res.removeHeader("Authorization");
-    res.status(200).json({ msg: "Logged out." });
+    if (req.header("Authorization")) {
+      res.removeHeader("Authorization");
+      res.status(200).json({ msg: "Logged out" });
+    } else res.status(401).json({ msg: "Not Authorized" });
   },
 };
 
