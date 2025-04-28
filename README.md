@@ -3,7 +3,7 @@
 <div align="center">
   <img src="images/logo.png" alt="Logo" width="80" height="80">
   <h3>Lorikeet Collective Backend</h3>
-  <span>v0.0.3 | <a href="https://github.com/Lorikeet-Collective/BaseSite-Backend/blob/adminaccounts/CHANGELOG.md">Changelog</a></span>
+  <span>v0.0.3 | <a href="https://github.com/Lorikeet-Collective/BaseSite-Backend/blob/dev/CHANGELOG.md">Changelog</a></span>
 </div>
 
 <!-- Table of Contents -->
