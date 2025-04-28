@@ -1,9 +1,10 @@
-import type { Express, Response } from "express";
+import type { Response } from "express";
+import { Router } from "express";
 
-const routes = (app: Express): void => {
-  app.get("/", async (_, res: Response): Promise<void> => {
-    res.json({ message: "Hello World!" });
-  });
-};
+const router: Router = Router();
 
-export default routes;
+router.get("/", async (_, res: Response): Promise<void> => {
+  res.json({ message: "Hello World!" });
+});
+
+export default router;

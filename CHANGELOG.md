@@ -1,4 +1,4 @@
-# Current Version: [v0.0.1](#v001)
+# Current Version: [v0.0.3](#v003)
 
 > [!IMPORTANT]
 >
@@ -17,11 +17,46 @@
 <details>
     <summary>Table-of-Contents</summary>
 
+- [v0.0.3](#v003)
+- [v0.0.2](#v002)
 - [v0.0.1](#v001)
 
 </details>
 
 ## Previous Versions
+
+### v0.0.3
+
+<details>
+    <summary>Changes</summary>
+
+- New Features
+  - Added POST /admin/logout and basic functionality
+  - Added POST /admin/login and basic functionality
+  - Added Account schema layout for account creation
+  - Added Account controller for route logic
+  - Added authorization header as current form of auth
+  - Added validation for login
+  - Added JWT authorization middleware for protected routes
+- Changes
+  - Routes now correctly use /api as a prefix
+  - Changed routing system to use express.Router()
+
+</details>
+
+### v0.0.2
+
+<details>
+    <summary>Changes</summary>
+
+- New Features
+  - Added mongodb connection file
+  - Added connection for both production and development environments
+  - Server will log database destination on start
+- Fixes
+  - Updated eslint config for easier use with typescript type system
+
+</details>
 
 ### v0.0.1
 
