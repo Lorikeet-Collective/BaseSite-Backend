@@ -31,9 +31,14 @@
     <summary>Changes</summary>
 
 - New Features
+  - Added /admin/logout and basic functionality
+  - Added /admin/login and basic functionality
   - Added Account schema layout for account creation
   - Added Account controller for route logic
+  - Added authorization header as current form of auth
+  - Added validation for login
 - Changes
+  - Routes now correctly use /api as a prefix
   - Changed routing system to use express.Router()
 
 </details>

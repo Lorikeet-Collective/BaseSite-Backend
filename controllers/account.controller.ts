@@ -69,6 +69,10 @@ const accountController = {
         res.status(500).json({ msg: "Something went wrong.", err: err });
       });
   },
+  logout: (_: unknown, res: Response): void => {
+    res.removeHeader("Authorization");
+    res.status(200).json({ msg: "Logged out." });
+  },
 };
 
 export default accountController;

@@ -7,6 +7,7 @@ const router: Router = Router();
 router.use("/admin", [
   router.get("/list", accountController.listAll),
   router.post("/login", accountController.login),
+  router.post("/logout", accountController.logout),
 ]);
 
 export default router;
