@@ -70,6 +70,7 @@ const accountController = {
       });
   },
   logout: (_: unknown, res: Response): void => {
+    // Bearer token must exist and be removed
     res.removeHeader("Authorization");
     res.status(200).json({ msg: "Logged out." });
   },
